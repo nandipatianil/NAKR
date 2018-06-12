@@ -1,0 +1,15 @@
+<project name="ant-practise" default="create">
+	<target name="clean">
+		<delete dir="output"/>
+		<delete dir="dist"/>
+	</target>
+	<target name="create" depends="clean">
+		<mkdir dir="output"/>
+		<mkdir dir="dist"/>
+		<mkdir dir="output/classes"/>
+	</target>
+	<target name="compile" depends="create">
+		<javac srcdir="src" destdir="output/classes"/>
+	</target>
+</project>
+	
